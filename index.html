@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./images/muser-laptop-512.webp">
+    <title>km chas km minut km sekund</title>
+</head>
+
+<body>
+
+    <div class="wave">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="text-white">Welcome !</h1>
+            </div>
+            <form class="speed-form">
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <input type="text" id="input" class=" form-control w-25 mx-4" placeholder="km ...">
+                    <button class="btn btn-primary  speed-form__btn">Submit</button>
+                </div>
+                <div class="d-flex w-100 justify-content-between mt-5">
+                    <div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img class="" src="./images/icon1.png" width="100" height="100" alt="">
+                        </div>
+                        <p class="speed-form__foot mt-4 text-center">person</p>  
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="./images/icon2.png" alt="" width="100" height="100">
+                        </div>
+                        <p class="speed-form__bike text-center mt-4">bike</p>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="./images/icon3.png" alt="" width="100" height="100">
+                        </div>
+                        <p class="speed-form__car text-center mt-4">car</p>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="./images/icon4.png" alt="" width="100" height="100">
+                        </div>
+                        <p class="speed-form__airplane text-center mt-4">airplane</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!--js-->
+    <script>
+        function rain() {
+            let amount = 200;
+            let body = document.querySelector('body');
+            let i = 0;
+            while (i < amount) {
+                let drop = document.createElement('i');
+
+
+                let size = Math.random() * 5;
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let delay = Math.random() * -20;
+                let duration = Math.random() * 5;
+
+                drop.style.width = 0.2 + size + 'px';
+                drop.style.left = posX + 'px';
+                drop.style.animationDelay = delay + 's';
+                drop.style.animationDuration = 1 + duration + 's';
+                body.appendChild(drop);
+                i++
+            }
+        }
+
+        rain();
+    </script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
